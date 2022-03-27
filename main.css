@@ -1,0 +1,78 @@
+.loginContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	padding: 48px;
+}
+
+.signinImg {
+	padding: 24px;
+}
+
+.signinTitle {
+	padding: 24px;
+}
+
+.idTitle {
+	padding: 4px 4px 4px 2px;
+}
+.idContainer {
+	width: 50%;
+	padding: 12px;
+}
+
+.pwTitle {
+	padding: 4px 4px 4px 2px;
+}
+.pwContainer {
+	width: 50%;
+	padding: 12px;
+	margin-bottom: 24px;
+}
+
+.login {
+	padding: 8px 16px 8px 16px;
+}
+
+.signupContainer {
+	display: grid;
+	justify-content: center;
+	padding: 48px;
+}
+
+.signupTitle {
+	padding: 24px;
+}
+
+.sIdContainer,
+.sPwContainer,
+.sPwCheckContainer,
+.sSnContainer,
+.sPnContainer,
+.major {
+	margin: 12px;
+	width: 100%;
+}
+
+.pwInfo,
+.idInfo,
+.pwCheckInfo,
+.snInfo,
+.majorInfo,
+.pnInfo {
+	padding: 4px 4px 0px 2px;
+}
+
+.signupButtonContainer {
+	display: flex;
+	justify-content: space-between;
+}
+
+.signup,
+.cancel {
+	width: 30%;
+	height: 48px;
+	margin: 8px 12px 8px 12px;
+}
