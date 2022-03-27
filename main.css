@@ -38,8 +38,9 @@
 
 .signupContainer {
 	display: grid;
+	width: 100%;
 	justify-content: center;
-	padding: 48px;
+	margin: 48px 0px 48px 0px;
 }
 
 .signupTitle {
@@ -52,8 +53,7 @@
 .sSnContainer,
 .sPnContainer,
 .major {
-	margin: 12px;
-	width: 100%;
+	margin: 12px 0px 12px 12px;
 }
 
 .pwInfo,
@@ -62,17 +62,17 @@
 .snInfo,
 .majorInfo,
 .pnInfo {
-	padding: 4px 4px 0px 2px;
+	padding: 4px 0px 0px 2px;
 }
 
 .signupButtonContainer {
 	display: flex;
 	justify-content: space-between;
+	margin: 12px 0px 12px 12px;
 }
 
 .signup,
 .cancel {
 	width: 30%;
 	height: 48px;
-	margin: 8px 12px 8px 12px;
 }
