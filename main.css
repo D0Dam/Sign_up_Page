@@ -5,7 +5,9 @@
 	align-items: center;
 	padding: 48px;
 }
-
+.fa-lock {
+	font-size: 48px;
+}
 .signinImg {
 	padding: 24px;
 }
@@ -74,4 +76,11 @@
 .cancel {
 	width: 30%;
 	height: 48px;
+}
+
+@media screen and (max-width: 445px) {
+	.nav {
+		display: flex;
+		flex-direction: column;
+	}
 }
