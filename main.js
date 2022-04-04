@@ -38,8 +38,8 @@ function idChange(email) {
 }
 
 function pwChange(password) {
-	let v = password.value;
-	let info = document.querySelectorAll(".signup__pwInfo");
+	const v = password.value;
+	const info = document.querySelectorAll(".signup__pwInfo");
 	if (!isValidPassword(v)) {
 		info[0].style.color = "red";
 	} else {
@@ -48,8 +48,8 @@ function pwChange(password) {
 }
 
 function pwCheck(check) {
-	let password = document.querySelector(".pw").value;
-	let info = document.querySelectorAll(".signup__pw-checkInfo");
+	const password = document.querySelector(".pw").value;
+	const info = document.querySelectorAll(".signup__pw-checkInfo");
 	if (password != check.value) {
 		info[0].innerText = "비밀번호가 맞지 않습니다.";
 		info[0].style.color = "red";
