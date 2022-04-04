@@ -10,25 +10,25 @@
 			integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
 			crossorigin="anonymous"
 		/>
-		<link href="./main.css" rel="stylesheet" />
+		<link href="./css/style.css" rel="stylesheet" />
 		<title>Document</title>
 	</head>
 	<body>
 		<ul class="nav nav-pills nav-fill">
-			<li class="nav-item">
+			<li class="nav-item nav__item">
 				<a class="nav-link signin-link" href="./mainLoginPage.html"
 					>loginPage</a
 				>
 			</li>
-			<li class="nav-item">
+			<li class="nav-item nav__item">
 				<a class="nav-link signup-link" href="./mainSignUpPage.html"
 					>signUpPage</a
 				>
 			</li>
 		</ul>
-		<div class="signupContainer">
-			<div class="signupTitle">SignUp</div>
-			<div class="form-floating sIdContainer">
+		<div class="signup">
+			<div class="signup__title">SignUp</div>
+			<div class="form-floating signup__id">
 				<input
 					type="text"
 					class="form-control id"
@@ -36,9 +36,9 @@
 					placeholder="Id"
 				/>
 				<label for="floatingInput">ID</label>
-				<div class="idInfo">아이디는 이메일 형식으로 작성해주세요</div>
+				<div class="signup__idInfo">아이디는 이메일 형식으로 작성해주세요</div>
 			</div>
-			<div class="form-floating sPwContainer">
+			<div class="form-floating signup__pw">
 				<input
 					type="password"
 					class="form-control pw"
@@ -46,11 +46,11 @@
 					placeholder="Password"
 				/>
 				<label for="floatingPassword">Password</label>
-				<div class="pwInfo">
+				<div class="signup__pwInfo">
 					비밀번호는 6자리 이상, 영문과 숫자, 특수기호를 포함해야 합니다.
 				</div>
 			</div>
-			<div class="form-floating sPwCheckContainer">
+			<div class="form-floating signup__pw-check">
 				<input
 					type="password"
 					class="form-control pw-check"
@@ -58,9 +58,9 @@
 					placeholder="Repress Password"
 				/>
 				<label for="floatingPassword">Repress Password</label>
-				<div clas="pwCheckInfo">비밀번호를 다시 입력해주세요.</div>
+				<div class="signup__pw-checkInfo">비밀번호를 다시 입력해주세요.</div>
 			</div>
-			<div class="form-floating sSnContainer">
+			<div class="form-floating signup__student-number">
 				<input
 					type="text"
 					class="form-control student-number"
@@ -68,9 +68,9 @@
 					placeholder="Press student-number"
 				/>
 				<label for="floatingInput">Student number</label>
-				<div class="snInfo">학번을 입력해주세요.</div>
+				<div class="signup__student-numberInfo">학번을 입력해주세요.</div>
 			</div>
-			<div class="major">
+			<div class="signup__major">
 				<select class="form-select" aria-label="Default select example">
 					<option selected>Select your major</option>
 					<option value="1">컴퓨터공학과</option>
@@ -81,9 +81,9 @@
 					<option value="6">산업디자인학과</option>
 					<option value="7">메카트로닉스학과</option>
 				</select>
-				<div class="majorInfo">해당하는 학과를 선택해주세요.</div>
+				<div class="signup__majorInfo">해당하는 학과를 선택해주세요.</div>
 			</div>
-			<div class="form-floating sPnContainer">
+			<div class="form-floating signup__phone-number">
 				<input
 					type="text"
 					class="form-control phone-number"
@@ -91,11 +91,17 @@
 					placeholder="Press phone-number"
 				/>
 				<label for="floatingInput">Phone number</label>
-				<div class="pnInfo">핸드폰번호를 -없이 입력해주세요.</div>
+				<div class="signup__phone-numberInfo">
+					핸드폰번호를 -없이 입력해주세요.
+				</div>
 			</div>
-			<div class="signupButtonContainer">
-				<button type="button" class="btn btn-primary signup">signUp</button>
-				<button type="button" class="btn btn-primary cancel">Cancel</button>
+			<div class="signup__button">
+				<button type="button" class="btn btn-primary signup__signup-button">
+					signUp
+				</button>
+				<button type="button" class="btn btn-primary signup__cancel-button">
+					Cancel
+				</button>
 			</div>
 		</div>
 		<script

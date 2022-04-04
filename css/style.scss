@@ -1,0 +1,62 @@
+.nav-link {
+	width: 150px !important;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.login {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-top: 48px;
+
+	div {
+		margin: 16px;
+	}
+
+	.fa-lock {
+		font-size: 48px;
+	}
+
+	.login__id,
+	.login__pw {
+		width: 360px;
+	}
+}
+
+.signup {
+	display: flex;
+	flex-direction: column;
+	margin-top: 48px;
+	justify-content: center;
+	align-items: center;
+	div {
+		margin: 4px;
+		&.signup__title {
+			margin-bottom: 12px;
+		}
+		width: 360px;
+	}
+
+	.signup__idInfo,
+	.signup__pwInfo,
+	.signup__pw-checkInfo,
+	.signup__majorInfo,
+	.signup__phone-numberInfo,
+	.signup__student-numberInfo {
+		font-size: 12px;
+	}
+
+	.signup__button {
+		display: flex;
+		justify-content: space-between;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.nav {
+		display: flex;
+		flex-direction: column;
+	}
+}
