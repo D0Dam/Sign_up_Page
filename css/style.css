@@ -67,6 +67,7 @@
 .signup .signup__phone-numberInfo,
 .signup .signup__student-numberInfo {
   font-size: 12px;
+  color: black;
 }
 
 .signup .signup__button {
