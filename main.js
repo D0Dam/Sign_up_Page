@@ -1,4 +1,5 @@
 let countFail = 0;
+let IDKey = 1;
 function isValidEmail(email) {
 	const emailRegExp = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 	return email.match(emailRegExp);
@@ -34,10 +35,11 @@ function loginButtonClick() {
 			alert("올바르지 않은 password 형식입니다.");
 			countFail++;
 		} else {
-			localStorage.setItem("ID", id);
-			sessionStorage.setItem("ID", id);
-			Cookies.set("ID", id, { expires: 3 });
+			localStorage.setItem("ID" + IDKey, id);
+			sessionStorage.setItem("ID" + IDKey, id);
+			Cookies.set("ID" + IDKey, id, { expires: 3 });
 			alert("ID가 저장됩니다!");
+			IDKey++;
 		}
 	}
 	console.log(countFail);
@@ -47,14 +49,18 @@ function loginButtonClick() {
 }
 
 function logoutButtonClick() {
+	alert("모든 스토리지가 초기화 됩니다!");
 	const cookieName = "ID";
 	const cookieFlag = "flag";
 	localStorage.clear();
 	sessionStorage.clear();
 	Object.keys(Cookies.get()).forEach(function () {
-		Cookies.remove(cookieName);
+		for (let i = 1; i <= IDKey; i++) {
+			Cookies.remove(cookieName + i);
+		}
 		Cookies.remove(cookieFlag);
 	});
+	IDKey = 0;
 }
 
 function idChange(email) {
