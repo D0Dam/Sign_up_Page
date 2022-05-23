@@ -48,12 +48,13 @@ function loginButtonClick() {
 
 function logoutButtonClick() {
 	const cookieName = "ID";
+	const cookieFlag = "flag";
 	localStorage.clear();
 	sessionStorage.clear();
-	Object.keys(Cookies.get()).forEach(function (cookieName) {
+	Object.keys(Cookies.get()).forEach(function () {
 		Cookies.remove(cookieName);
+		//Cookies.remove(cookieFlag);
 	});
-	console.log("a");
 }
 
 function idChange(email) {

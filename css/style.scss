@@ -25,6 +25,12 @@
 	}
 }
 
+.signin__buttons {
+	display: flex;
+	justify-content: space-between;
+	width: 20rem;
+}
+
 .signup {
 	display: flex;
 	flex-direction: column;

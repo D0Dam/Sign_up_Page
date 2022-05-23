@@ -34,6 +34,16 @@
   width: 360px;
 }
 
+.signin__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 20rem;
+}
+
 .signup {
   display: -webkit-box;
   display: -ms-flexbox;
