@@ -53,7 +53,7 @@ function logoutButtonClick() {
 	sessionStorage.clear();
 	Object.keys(Cookies.get()).forEach(function () {
 		Cookies.remove(cookieName);
-		//Cookies.remove(cookieFlag);
+		Cookies.remove(cookieFlag);
 	});
 }
 
