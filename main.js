@@ -81,3 +81,12 @@ function pnAutoHyphen(pn) {
 function signUpClick() {
 	alert("회원가입!");
 }
+
+axios
+	.get("https://api.thecatapi.com/v1/images/search?size=full")
+	.then((response) => {
+		const resData = response.data;
+		const imgUrl = resData[0].url;
+		document.getElementById("catImg").src = imgUrl;
+	})
+	.catch((error) => console.log(new Error(error)));
