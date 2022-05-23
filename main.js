@@ -1,3 +1,4 @@
+let countFail = 0;
 function isValidEmail(email) {
 	const emailRegExp = /^[a-zA-Z0-9+-\_.]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
 	return email.match(emailRegExp);
@@ -11,20 +12,48 @@ function isValidPassword(password) {
 function loginButtonClick() {
 	const id = document.querySelector(".id").value;
 	const pw = document.querySelector(".pw").value;
+	if (Cookies.get("flag") == "preventLogin") {
+		return alert(
+			"5회 이상 잘못 입력하여 1시간 동안 로그인을 시도할 수 없습니다."
+		);
+	}
 	if (!id && !pw) {
 		alert("id와 password가 입력되지 않았습니다.");
+		countFail++;
 	} else if (!id) {
 		alert("id가 입력되지 않았습니다.");
+		countFail++;
 	} else if (!pw) {
 		alert("password가 입력되지 않았습니다.");
+		countFail++;
 	} else {
 		if (!isValidEmail(id)) {
 			alert("올바르지 않은 id 형식입니다.");
-		}
-		if (!isValidPassword(pw)) {
+			countFail++;
+		} else if (!isValidPassword(pw)) {
 			alert("올바르지 않은 password 형식입니다.");
+			countFail++;
+		} else {
+			localStorage.setItem("ID", id);
+			sessionStorage.setItem("ID", id);
+			Cookies.set("ID", id, { expires: 3 });
+			alert("ID가 저장됩니다!");
 		}
 	}
+	console.log(countFail);
+	if (countFail == 5) {
+		Cookies.set("flag", "preventLogin", { expires: 0.0417 });
+	}
+}
+
+function logoutButtonClick() {
+	const cookieName = "ID";
+	localStorage.clear();
+	sessionStorage.clear();
+	Object.keys(Cookies.get()).forEach(function (cookieName) {
+		Cookies.remove(cookieName);
+	});
+	console.log("a");
 }
 
 function idChange(email) {
